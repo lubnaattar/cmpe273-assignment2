@@ -52,7 +52,7 @@ class Listener {
 		try {
 			String user = "admin";
 			String password = "password";
-			String host = "54.215.210.214";
+			String host = "54.219.156.168";
 			int port = 61613;
 			String destination = topicName; //topic name from configuration
 

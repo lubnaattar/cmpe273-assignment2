@@ -17,7 +17,7 @@ libraryName: library-a
 # TODO: Apollo STOMP Broker URL and login
 apolloUser: "admin"
 apolloPassword: "password"
-apolloHost: "54.215.210.214"
+apolloHost: "54.219.156.168"
 apolloPort: 61613
 
 # HTTP-specific options.

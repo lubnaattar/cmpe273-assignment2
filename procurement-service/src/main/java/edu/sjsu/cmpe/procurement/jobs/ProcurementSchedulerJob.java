@@ -35,7 +35,7 @@ import edu.sjsu.cmpe.procurement.domain.Book;
 /**
  * This job will run at every 5 second.
  */
-@Every("60s")
+@Every("300s")
 public class ProcurementSchedulerJob extends Job {
 	private final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -64,7 +64,7 @@ public class ProcurementSchedulerJob extends Job {
 	public ArrayList<Long> consumeQueueMessages() throws JMSException {
 		String user = "admin";
 		String password = "password";
-		String host = "54.215.210.214";
+		String host = "54.219.156.168";
 		int port = 61613;
 
 		// ArrayList<Book> booksList;
@@ -122,7 +122,7 @@ public class ProcurementSchedulerJob extends Job {
 
 			Client client = Client.create();
 			WebResource webResource = client
-					.resource("http://54.215.210.214:9000/orders");
+					.resource("http://54.219.156.168:9000/orders");
 
 			// String isbnArrayValue = "";
 			/*
@@ -158,7 +158,7 @@ public class ProcurementSchedulerJob extends Job {
 		String output = "";
 		String user = "admin";
 		String password = "password";
-		String host = "54.215.210.214";
+		String host = "54.219.156.168";
 		int port = 61613;
 
 		try {
@@ -166,7 +166,7 @@ public class ProcurementSchedulerJob extends Job {
 			Client client = Client.create();
 
 			WebResource webResource = client
-					.resource("http://54.215.210.214:9000/orders/84157");
+					.resource("http://54.219.156.168:9000/orders/84157");
 
 			ClientResponse response = webResource.accept("application/json")
 					.get(ClientResponse.class);
