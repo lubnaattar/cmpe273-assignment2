@@ -31,7 +31,7 @@ public class JobManager implements Managed {
     	reflections = new Reflections(scanUrl);
     }
     
-    //@Override
+    @Override
     public void start() throws Exception {
         scheduler = StdSchedulerFactory.getDefaultScheduler();
         scheduler.start();
@@ -41,7 +41,7 @@ public class JobManager implements Managed {
         scheduleAllJobsWithOnAnnotation();
     }
 
-    //@Override
+    @Override
     public void stop() throws Exception {
         scheduleAllJobsOnApplicationStop();
 
